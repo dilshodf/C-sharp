@@ -62,16 +62,16 @@
 //a = 9; b = -3 -> да
 //a = -3 b = 9 -> нет
 
-System.Console.Write("Input a: ");
-int a = Convert.ToInt32(Console.ReadLine());
-System.Console.Write("Input b: ");
-int b = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write("Input a: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write("Input b: ");
+// int b = Convert.ToInt32(Console.ReadLine());
 
-if (a == b * b)
-{
-    System.Console.Write($"a = {a}, b = {b} -> yes");
-}
-else
-{
-    System.Console.Write($"a = {a}, b = {b} -> no");
-}
+// if (a == b * b)
+// {
+//     System.Console.Write($"a = {a}, b = {b} -> yes");
+// }
+// else
+// {
+//     System.Console.Write($"a = {a}, b = {b} -> no");
+// }
