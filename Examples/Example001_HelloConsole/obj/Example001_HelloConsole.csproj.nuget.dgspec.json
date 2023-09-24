@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GB\\C #\\Examples\\Example001_HelloConsole\\Example001_HelloConsole.csproj": {}
+    "d:\\GB\\C #\\Examples\\Example001_HelloConsole\\Example001_HelloConsole.csproj": {}
   },
   "projects": {
-    "D:\\GB\\C #\\Examples\\Example001_HelloConsole\\Example001_HelloConsole.csproj": {
+    "d:\\GB\\C #\\Examples\\Example001_HelloConsole\\Example001_HelloConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GB\\C #\\Examples\\Example001_HelloConsole\\Example001_HelloConsole.csproj",
+        "projectUniqueName": "d:\\GB\\C #\\Examples\\Example001_HelloConsole\\Example001_HelloConsole.csproj",
         "projectName": "Example001_HelloConsole",
-        "projectPath": "D:\\GB\\C #\\Examples\\Example001_HelloConsole\\Example001_HelloConsole.csproj",
+        "projectPath": "d:\\GB\\C #\\Examples\\Example001_HelloConsole\\Example001_HelloConsole.csproj",
         "packagesPath": "C:\\Users\\Lenovo Legion 1\\.nuget\\packages\\",
-        "outputPath": "D:\\GB\\C #\\Examples\\Example001_HelloConsole\\obj\\",
+        "outputPath": "d:\\GB\\C #\\Examples\\Example001_HelloConsole\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lenovo Legion 1\\AppData\\Roaming\\NuGet\\NuGet.Config"
