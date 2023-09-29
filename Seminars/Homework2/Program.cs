@@ -27,37 +27,23 @@
 // {
 //     if (num < 100)
 //     {
-//         System.Console.WriteLine($"{num} -> третьей цифры нет");
+//         System.Console.Write($"{num} -> третьего номера нет");
 //     }
-//     else if (num < 1000)
-//     { 
-//         System.Console.WriteLine($"{num} -> {num % 10}");
+//     int n = 1;
+//     while (num >= 100)
+//     {
+//         if (num < (1000 * n))
+//         {
+//             System.Console.WriteLine($"{num} -> {(num / n) % 10}");
+//             break;
+//         }
+//         else
+//         {
+//             n = n * 10;
+//         }
+        
 //     }
-//     else if (num < 10000)
-//     { 
-//         System.Console.WriteLine($"{num} -> {(num /10) % 10}");
-//     }
-//     else if (num < 100000)
-//     { 
-//         System.Console.WriteLine($"{num} -> {(num /100) % 10}");
-//     }
-//     else if (num < 1000000)
-//     { 
-//         System.Console.WriteLine($"{num} -> {(num /1000) % 10}");
-//     }
-//     else if (num < 10000000)
-//     { 
-//         System.Console.WriteLine($"{num} -> {(num /10000) % 10}");
-//     }
-//     else if (num < 100000000)
-//     { 
-//         System.Console.WriteLine($"{num} -> {(num /100000) % 10}");
-//     }
-//     else if (num < 1000000000)
-//     { 
-//         System.Console.WriteLine($"{num} -> {(num /1000000) % 10}");
-//     }
-// }
+// }    
 
 // System.Console.Write("Input number: ");
 // int num = Convert.ToInt32(Console.ReadLine());
