@@ -8,54 +8,6 @@
 //     int[] array = new int[size];
 //     for (int i = 0; i < size; i++)
 //     {
-//         array[i] = new Random().Next(minValue, maxValue + 1); 
-//     }
-//     return array;
-// }
-
-// void PrintArray(int[] array) 
-// {
-//     for (int i =0; i < array.Length; i++)
-//     {
-//         System.Console.Write(array[i] + " ");
-//     }
-// }
-
-// void PosNegSum(int[] array)
-// {
-//     int positiveSum = 0;
-//     int negativeSum = 0;
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         if( array[i] > 0)
-//         {
-//             positiveSum += array[i];
-//         }
-//         else
-//         {
-//             negativeSum += array[i];
-//         }
-//     }
-//     System.Console.WriteLine(($"Sum of positive array elements ->{positiveSum}\nSum of negative array elements ->{negativeSum}"));
-// }
-
-// System.Console.Write("Input size: ");
-// int size = Convert.ToInt32(Console.ReadLine());
-// System.Console.Write("Input min value: ");
-// int min = Convert.ToInt32(Console.ReadLine());
-// System.Console.Write("Input max value: ");
-// int max = Convert.ToInt32(Console.ReadLine());
-
-// int[] myArray = (CreateRandomArray(size, min, max)); 
-// System.Console.Write(CreateRandomArray(size, min, max));
-// PosNegSum(CreateRandomArray(size, min, max));
-
-
-// int[] CreateRandomArray(int size, int minValue, int maxValue)
-// {
-//     int[] array = new int[size];
-//     for (int i = 0; i < size; i++)
-//     {
 //         array[i] = new Random().Next(minValue, maxValue + 1);
 //     }
 //     return array;
@@ -67,7 +19,7 @@
 //     {
 //         System.Console.Write(array[i] + " ");
 //     }
-//     System.Console.WriteLine();
+//     System.Console.WriteLine(); // для отступа после массива
 // }
 
 // void PosNegSum(int[] array)
@@ -76,17 +28,17 @@
 //     int negativeSum = 0;
 //     for (int i = 0; i < array.Length; i++)
 //     {
-//         if(array[i] > 0)
+//         if (array[i] > 0)
 //         {
 //             positiveSum += array[i];
-//         } else
+//         }
+//         else
 //         {
 //             negativeSum += array[i];
 //         }
 //     }
-//     System.Console.WriteLine($"Sum of positive array elements ->{positiveSum}\nSum of negative array elements ->{negativeSum}");
+//     System.Console.WriteLine(($"Sum of positive array elements -> {positiveSum}\nSum of negative array elements -> {negativeSum}"));
 // }
-
 
 // System.Console.Write("Input size: ");
 // int size = Convert.ToInt32(Console.ReadLine());
@@ -97,9 +49,11 @@
 // System.Console.Write("Input max value: ");
 // int max = Convert.ToInt32(Console.ReadLine());
 
-// int[] myArray = CreateRandomArray(size, min, max);
+// int[] myArray = (CreateRandomArray(size, min, max));
 // PrintArray(myArray);
 // PosNegSum(myArray);
+
+
 
 
 
@@ -188,14 +142,14 @@
 //     System.Console.WriteLine();
 // }
 
-// bool FindElemet(int[]array, int n)
+// bool FindElemet(int[] array, int n)
 // {
 //     for (int i = 0; i < array.Length; i++)
 //     {
-//        if (n == array[i])
-//        return true;
+//         if (n == array[i])
+//             return true;
 //     }
-//        return false;
+//     return false;
 // }
 // System.Console.Write("Input size: ");
 // int size = Convert.ToInt32(Console.ReadLine());
@@ -218,49 +172,51 @@
 
 
 
+
+
 // **Задача 32:** Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
 // [-4, -8, 8, 2] -> [4, 8, -8, -2]
 
-int[] CreateRandomArray(int size, int minValue, int maxValue)
-{
-    int[] array = new int[size];
-    for (int i = 0; i < size; i++)
-    {
-        array[i] = new Random().Next(minValue, maxValue + 1);
-    }
-    return array;
-}
-void PrintArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        System.Console.Write(array[i] + " ");
-    }
-    System.Console.WriteLine();
-}
+// int[] CreateRandomArray(int size, int minValue, int maxValue)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(minValue, maxValue + 1);
+//     }
+//     return array;
+// }
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         System.Console.Write(array[i] + " ");
+//     }
+//     System.Console.WriteLine();
+// }
 
-int[] MirrorNumbersInArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        array[i] *= -1;
-    }
-    return array;
-}
+// int[] MirrorNumbersInArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] *= -1;
+//     }
+//     return array;
+// }
 
-System.Console.Write("Input size: ");
-int size = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write("Input size: ");
+// int size = Convert.ToInt32(Console.ReadLine());
 
-System.Console.Write("Input min value: ");
-int min_value = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write("Input min value: ");
+// int min_value = Convert.ToInt32(Console.ReadLine());
 
-System.Console.Write("Input max value: ");
-int max_value = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write("Input max value: ");
+// int max_value = Convert.ToInt32(Console.ReadLine());
 
-int[] myArray = CreateRandomArray(size, min_value, max_value);
-System.Console.Write("Изначальный массив - > ");
-PrintArray(myArray);
+// int[] myArray = CreateRandomArray(size, min_value, max_value);
+// System.Console.Write("Изначальный массив - > ");
+// PrintArray(myArray);
 
-int[] mirror_array = MirrorNumbersInArray(myArray);
-System.Console.Write("Зеркальный массив - > ");
-PrintArray(mirror_array);
+// int[] mirror_array = MirrorNumbersInArray(myArray);
+// System.Console.Write("Зеркальный массив - > ");
+// PrintArray(mirror_array);
