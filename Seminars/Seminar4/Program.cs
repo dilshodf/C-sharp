@@ -6,9 +6,9 @@
 // int DigitCount(int num)
 // {
 //     int count = 1;
-//     for (int i = 0; num > 10; i++)
+//     for (int i = 0; num >= 10; i++) // пока число больше или равно 10 будем делить на 10 и считать количество раз (смысл for теряется, i никак не задействовано)
 //     {
-//         num /= 10;
+//         num /= 10;  // num = num / 10
 //         count++;
 //     }
 //     return count;
@@ -18,10 +18,11 @@
 // int num = Convert.ToInt32(Console.ReadLine());
 // System.Console.WriteLine(DigitCount(num));
 
+
 // int DigitCount(int num)
 // {
 //     int count = 0;
-//     for (int i = 1; Math.Abs(num) > 0; i++)  // для отрицательных чисел
+//     for (int i = 1; Math.Abs(num) > 0; i++)  // для отрицательных чисел (чтобы использовать i решаем этим способом)
 //     {
 //         num /= 10;
 //         count = i;
@@ -34,18 +35,20 @@
 // System.Console.WriteLine(DigitCount(num));
 
 
-// int GetDigigtsCount(int number)
+// int GetDigigtsCount(int num)
 // {
 //     int result = 0;
-//     while (number > 0)
+//     while (num > 0)
 //     {
 //         result++;
-//         number /= 10;
+//         num /= 10;
 //     }
 //     return result;
 // }
 
-// Console.WriteLine(GetDigigtsCount(1024));
+// System.Console.Write("Input num: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(GetDigigtsCount(num));
 
 
 
@@ -53,12 +56,14 @@
 // Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке.
 // [1,0,1,1,0,1,0,0] (решим для любого количества элементов)
 
+// В данном примере мы выведем массив из скольки угодно элементов заполненный рандомными значениями в указанном диапазоне
+
 // int[] // будет возвращать массив целых чисел
 
 // int[] CreateRandomArray(int size, int minValue, int maxValue)
 // {
-//     int[] array = new int[size]; // выделяем память на массив размера size (инициализируем массив)
-//     for (int i = 0; i < array.Length; i++)
+//     int[] array = new int[size]; // мы хотим создать массив целых чисел и выделяем память на массив размера size (инициализируем массив)
+//     for (int i = 0; i < size; i++) // если работаем с массивом, то всегда используем цикл
 //     {
 //         array[i] = new Random().Next(minValue, maxValue + 1); // Обратились к каждому элементу массива и заполинили их рандомными числами
 //     }
@@ -80,7 +85,7 @@
 // System.Console.Write("Input max value: ");
 // int max = Convert.ToInt32(Console.ReadLine());
 
-// System.Console.Write(CreateRandomArray(size, min, max));
+// PrintArray(CreateRandomArray(size, min, max));
 
 
 
@@ -89,64 +94,36 @@
 // 7 -> 28
 // 4 -> 10
 // 8 -> 36
+// Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
+// 4  -> 24
+// 5  -> 120
+// Решим разом 2 задачи
 
-// int GetSumNumbers (int num)
+
+// int FindSum(int n)
 // {
 //     int sum = 0;
-//     for (int i=1; i <= num; i++)
+//     for (int i = 1; i <= n; i++)
 //     {
 //         sum += i;
 //     }
 //     return sum;
 // }
-// System.Console.Write("Input number: ");
-// int num = Convert.ToInt32(Console.ReadLine());
-// System.Console.WriteLine(GetSumNumbers(num));
-
-// int n = int.Parse(Console.ReadLine());  // некий другой способ
-
-//     int result = 1;
-//     for (int i = 1; i <= n; i++)
-//     {
-//         result *= i;
-//     }
-    
-//     Console.WriteLine("Product of numbers from 1 to " + n + " is " + result);
-// }
-
-// int FindSum(int n)
-// {
-//     int sum = 0;
-//     for(int i = 1; i <= n; i++)
-//     {
-//         sum +=1;
-//     }
-//     return sum;
-// }
-
-// System.Console.Write("Input N: ");
-// int num = Convert.ToInt32(Console.ReadLine());
-// System.Console.WriteLine(FindSum(num));
-
-
-
-// Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
-// 4  -> 24
-// 5  -> 120
 
 // int FindFactorial(int n)
 // {
 //     int fact = 1;
-//     for(int i = 1; i <= n; i++)
+//     for (int i = 1; i <= n; i++)
 //     {
-//         fact *=1;
+//         fact *= i;
 //     }
 //     return fact;
 // }
 
 // System.Console.Write("Input N: ");
-// int num = Convert.ToInt32(Console.ReadLine());
-// System.Console.WriteLine(FindFactorial(num));
+// int n = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine(FindSum(n));
+// System.Console.WriteLine(FindFactorial(n));
 
 
 
