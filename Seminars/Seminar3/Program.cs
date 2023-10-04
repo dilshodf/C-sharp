@@ -20,9 +20,7 @@
 
 
 // Напишите программу, которая принимает на вход число (N) и выдаёт таблицу квадратов чисел от 1 до N.
-
 // 5 -> 1, 4, 9, 16, 25.
-
 // 2 -> 1,4
 
 // void QuadTable(int n)
@@ -34,7 +32,7 @@
 //         System.Console.Write(current * current + ", ");
 //         current++;
 //     }
-//     System.Console.WriteLine(current *current );
+//     System.Console.WriteLine(current *current ); // чтобы избежать запятую в конце списка (1,4,9,16,), сделали этот мув
 // }
 
 // System.Console.Write("Input N: ");
@@ -50,23 +48,23 @@
 // показывает диапазон возможных координат точек в этой четверти (x и y).
 
 
-// int FindCoords(int quarter)
+// void FindCoords(int quarter)
 // {
 //     if (quarter == 1)
 //     {
-//         System.Console.WriteLine(x > 0, y > 0);
+//         System.Console.WriteLine("x > 0, y > 0");
 //     }
 //     else if (quarter == 2)
 //     {
-//         System.Console.WriteLine(x > 0, y > 0);
+//         System.Console.WriteLine("x > 0, y > 0");
 //     }
 //     else if (quarter == 3)
 //     {
-//         System.Console.WriteLine(x < 0, y < 0);
+//         System.Console.WriteLine("x < 0, y < 0");
 //     }
 //     else if (quarter == 4)
 //     {
-//         System.Console.WriteLine((x > 0, y < 0));
+//         System.Console.WriteLine("x > 0, y < 0");
 //     }
 //     else
 //     {
@@ -75,7 +73,7 @@
 // }
 
 // System.Console.Write("Input quarter: ");
-// int q= Convert.ToInt32(Console.ReadLine());
+// int q = Convert.ToInt32(Console.ReadLine());
 // FindCoords(q);
 
 
@@ -86,28 +84,24 @@
 
 // Напишите программу, которая принимает на вход координаты двух точек и находит расстояние 
 // между ними в 2D пространстве.
-
-
-
 // A (3,6); B (2,1) -> 5,09
 // A (7,-5); B (1,-1) -> 7,21
 
 
+// double Distance (double xa, double ya, double xb, double yb)
+// {
+//     return Math.Sqrt(Math.Pow(xb - xa, 2) + Math.Pow(yb - ya, 2));
+// }
 
-double Distance (double xa, double ya, double xb, double yb)
-{
-    return Math.Sqrt(Math.Pow(xb - xa, 2) + Math.Pow(yb - ya, 2));
-}
+// System.Console.WriteLine("write coords: ");
+// System.Console.WriteLine("Coords X in A");
+// double xa = Convert.ToDouble(Console.ReadLine());
+// System.Console.WriteLine("Coords Y in A");
+// double ya = Convert.ToDouble(Console.ReadLine());
+// System.Console.WriteLine("Coords X in B");
+// double xb = Convert.ToDouble(Console.ReadLine());
+// System.Console.WriteLine("Coords Y in B");
+// double yb = Convert.ToDouble(Console.ReadLine());
 
-System.Console.WriteLine("write coords: ");
-System.Console.WriteLine("Coords X in A");
-double xa = Convert.ToDouble(Console.ReadLine());
-System.Console.WriteLine("Coords Y in A");
-double ya = Convert.ToDouble(Console.ReadLine());
-System.Console.WriteLine("Coords X in B");
-double xb = Convert.ToDouble(Console.ReadLine());
-System.Console.WriteLine("Coords Y in B");
-double yb = Convert.ToDouble(Console.ReadLine());
-
-// System.Console.WriteLine(Distance(xa, ya, xb, yb));
-System.Console.WriteLine($"A ({xa}, {ya}); B ({xb},{yb}) -> {Math.Round(Distance(xa, ya, xb, yb), 2)}");
+// // System.Console.WriteLine(Distance(xa, ya, xb, yb));
+// System.Console.WriteLine($"A ({xa},{ya}); B ({xb},{yb}) -> {Math.Round(Distance(xa, ya, xb, yb), 2)}");
