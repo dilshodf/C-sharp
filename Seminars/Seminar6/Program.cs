@@ -18,7 +18,7 @@ void PrintArray(int[] array)
     {
         System.Console.Write(array[i] + " ");
     }
-    System.Console.WriteLine();
+    // System.Console.WriteLine();  // закомментировали чтобы вывести результат как надо
 }
 
 int[] ReverseArray(int[] array)
@@ -43,25 +43,25 @@ System.Console.Write("Input max value: ");
 int max = Convert.ToInt32(Console.ReadLine());
 
 int[] myArray = CreateRandomArray(size, min, max);
-System.Console.Write("["); // косметика
-PrintArray(myArray);
-System.Console.Write("] -> ["); // косметика
-myArray = ReverseArray(myArray);
-PrintArray(myArray);
-System.Console.Write("]"); // косметика
+System.Console.Write("[");
+PrintArray(myArray);    // сначала выводим старый массив
+System.Console.Write("] -> [");
+myArray = ReverseArray(myArray);    // возвращает метод ReverseArray, который перевернет массив
+PrintArray(myArray);    //выводим новый перевернутый массив
+System.Console.Write("]");
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-**Задача 42:** Напишите программу, которая будет преобразовывать десятичное число в двоичное.
-45 -> 101101
-3 -> 11
-2 -> 10
+// **Задача 42:** Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+// 45 -> 101101
+// 3 -> 11
+// 2 -> 10
 
 string DecimalToBinary(int num)
 {
-    string result = string.Empty;
+    string result = string.Empty;      // присвоили значение (пустое)
     while (num > 0)
     {
         // result = result + num % 2;  // записывает справа
@@ -83,9 +83,9 @@ System.Console.WriteLine(DecimalToBinary(num));
 
 // Задача 40: Напишите программу, которая принимает на вход три числа и проверяет, может ли существовать треугольник с сторонами такой длины.
 
-bool CheckTriangle(int num_1, int num_2, int num_3)
+bool CheckTriangle(int a, int b, int c)
 {
-    if (num_1 + num_2 > num_3 && num_2 + num_3 > num_1 && num_1 + num_3 > num_2)
+    if (a + b > c && b + c > a && a + c > b)
     {
         System.Console.WriteLine("Такой треугольник сущетсвует. ");
         return true;
@@ -97,14 +97,14 @@ bool CheckTriangle(int num_1, int num_2, int num_3)
     }
 }
 
-System.Console.Write("Inpur your number 1: ");
-int user_number_1 = Convert.ToInt32(Console.ReadLine());
-System.Console.Write("Inpur your number 2: ");
-int user_number_2 = Convert.ToInt32(Console.ReadLine());
-System.Console.Write("Inpur your number 3: ");
-int user_number_3 = Convert.ToInt32(Console.ReadLine());
+System.Console.Write("Input a: ");
+int a = Convert.ToInt32(Console.ReadLine());
+System.Console.Write("Input b: ");
+int b = Convert.ToInt32(Console.ReadLine());
+System.Console.Write("Input c: ");
+int c = Convert.ToInt32(Console.ReadLine());
 
-CheckTriangle(user_number_1, user_number_2, user_number_3);
+CheckTriangle(a, b, c);
 
 
 
@@ -119,7 +119,7 @@ CheckTriangle(user_number_1, user_number_2, user_number_3);
 
 int[] Fibonacci(int n)
 {
-    int[] array = new int[n];
+    int[] array = new int[n];   // инициализировали массив размера (n)
     array[0] = 0;
     array[1] = 1;
     for (int i = 2; i < n; i++)
@@ -138,7 +138,7 @@ void PrintArray(int[] array)
     System.Console.WriteLine();
 }
 
-System.Console.Write("Inpur number: ");
+System.Console.Write("Input number: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
 PrintArray(Fibonacci(num));
