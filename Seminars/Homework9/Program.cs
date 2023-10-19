@@ -40,7 +40,6 @@
 //         {
 //             return FindSum(n - 1, m) + n;
 //         }
-
 //     }
 //     else return n;
 // }
